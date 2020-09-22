@@ -2,5 +2,5 @@
 <resources>
     <string name="app_name">ورقة عمل 1</string>
     <string name="hm">مرحبا العالمية!</string>
-    <string name="ButtonText"> أنا زر</string>
+    <string name="ButtonText">\' أنا زر</string>
 </resources>
