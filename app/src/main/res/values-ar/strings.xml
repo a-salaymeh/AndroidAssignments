@@ -3,4 +3,9 @@
     <string name="app_name">ورقة عمل 1</string>
     <string name="hm">مرحبا العالمية!</string>
     <string name="ButtonText">\' أنا زر</string>
+    <string name="loginID">login</string>
+    <string name="hintUser">Login name</string>
+    <string name="passwordID">Password</string>
+    <string name="switchID">ماذا يفعل هذا؟</string>
+
 </resources>
