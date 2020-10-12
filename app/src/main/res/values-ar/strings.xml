@@ -7,5 +7,9 @@
     <string name="hintUser">Login name</string>
     <string name="passwordID">Password</string>
     <string name="switchID">ماذا يفعل هذا؟</string>
+    <string name="dialog_message">Do you want to cancel?</string>
+    <string name="dialog_title">Title</string>
+    <string name="ok">yes</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
