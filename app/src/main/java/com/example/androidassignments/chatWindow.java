@@ -26,6 +26,7 @@ public class chatWindow extends AppCompatActivity {
             super(context, resource);
         }
         public int getCount(){
+            int i=0;
             return count;
         }
         public String getString(){
