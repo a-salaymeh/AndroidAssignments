@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
     protected static String ACTIVITY_NAME="MainActivity";
 
     Button btnRef;
+    Button btnChat;
     public static final int LIST_VIEW=10;
+    public static final int CHAT_VIEW=10;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        btnChat=findViewById(R.id.chat);
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chatIntent=new Intent(MainActivity.this,chatWindow.class);
+            }
+        });
+
 
     }
     protected void onActivityResult(int request_code, int response_code, Intent data) {
