@@ -11,33 +11,40 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class chatWindow extends AppCompatActivity {
     protected static String ACTIVITY_NAME="activity_chat_window";
 
-    int count=0;
-    String chatStr;
 
     ListView lstView;
     EditText et;
     Button btnChat;
+    ArrayList<String> textMessage;
+    ChatAddapter textAdapter;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chat_window);
+
+    }
     private class ChatAddapter extends ArrayAdapter<String>{
 
         public ChatAddapter(@NonNull Context context, int resource) {
             super(context, resource);
         }
         public int getCount(){
-            int i=0;
+            int count=0;
+            count=textMessage.size();
             return count;
         }
-        public String getString(){
-            return chatStr;
+        public String getString(int index){
+            String textStr;
+            textStr=textMessage.get(index);
+            return textStr;
         }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_window);
     }
 
     @Override

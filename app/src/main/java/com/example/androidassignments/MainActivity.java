@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         btnRef.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-
                 Intent listIntent=new Intent(MainActivity.this,list_items.class);
                 startActivityForResult(listIntent,LIST_VIEW);
             }
