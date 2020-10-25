@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnRef;
     Button btnChat;
     public static final int LIST_VIEW=10;
-    public static final int CHAT_VIEW=10;
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent chatIntent=new Intent(MainActivity.this,chatWindow.class);
+                startActivity(chatIntent);
             }
         });
 

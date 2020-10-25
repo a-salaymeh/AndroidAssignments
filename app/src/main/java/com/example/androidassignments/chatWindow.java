@@ -1,3 +1,4 @@
+
 package com.example.androidassignments;
 
 import androidx.annotation.NonNull;
@@ -5,78 +6,83 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class chatWindow extends AppCompatActivity {
-    protected static String ACTIVITY_NAME="activity_chat_window";
+    protected static String ACTIVITY_NAME = "activity_chat_window";
 
 
-    ListView lstView;
-    EditText et;
+    ListView chatView;
+    EditText userText;
     Button btnChat;
     ArrayList<String> textMessage;
-    ChatAddapter textAdapter;
+    ChatAdapter textAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
+        btnChat = findViewById(R.id.sent);
+        userText = findViewById(R.id.editText);
+        chatView = findViewById(R.id.listChat);
+        textMessage = new ArrayList<>();
+
+
+        textAdapter = new ChatAdapter(this);
+        chatView.setAdapter(textAdapter);
+
+
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textMessage.add(userText.getText().toString());
+                textAdapter.notifyDataSetChanged();
+                userText.setText("");
+            }
+        });
+
 
     }
-    private class ChatAddapter extends ArrayAdapter<String>{
 
-        public ChatAddapter(@NonNull Context context, int resource) {
-            super(context, resource);
+    private class ChatAdapter extends ArrayAdapter<String> {
+
+        public ChatAdapter(@NonNull Context context) {
+            super(context, 0);
         }
-        public int getCount(){
-            int count=0;
-            count=textMessage.size();
-            return count;
+
+        public int getCount() {
+            return textMessage.size();
         }
-        public String getString(int index){
-            String textStr;
-            textStr=textMessage.get(index);
-            return textStr;
+
+        public String getString(int index) {
+
+            return textMessage.get(index);
         }
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(ACTIVITY_NAME,"In OnResume()");
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i(ACTIVITY_NAME,"In onStart()");
-    }
+        public View getView(int index, View convertView, ViewGroup parent) {
+            LayoutInflater inflater = chatWindow.this.getLayoutInflater();
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(ACTIVITY_NAME,"In onPause()");
+            View result = null;
+            if (index % 2 == 0)
+                result = inflater.inflate(R.layout.inchat, null);
+            else
+                result = inflater.inflate(R.layout.outgoing, null);
 
-    }
+            TextView message = (TextView) result.findViewById(R.id.messageText);
+            message.setText(getItem(index));
+            return result;
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i(ACTIVITY_NAME,"In onStop()");
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(ACTIVITY_NAME,"In onDestroy()");
-
+        }
     }
 }

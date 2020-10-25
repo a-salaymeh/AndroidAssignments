@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".chatWindow"
-    android:orientation="vertical">
+    tools:context=".chatWindow">
 
     <ListView
-        android:id="@id/chat"
+        android:id="@+id/listChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -29,7 +28,7 @@
         android:layout_alignParentBottom="true"
         android:inputType="textShortMessage|textLongMessage"
         android:layout_toStartOf="@id/sent"
-        tools:ignore="LabelFor">
+        android:hint="hint">
     </EditText>
 
 
