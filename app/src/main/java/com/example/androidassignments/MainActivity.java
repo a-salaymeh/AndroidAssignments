@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnRef=findViewById(R.id.mainButton);
+        btnChat=findViewById(R.id.chatmain);
         btnRef.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -31,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        btnChat=findViewById(R.id.chat);
-        btnChat.setOnClickListener(new View.OnClickListener() {
+        btnChat.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v) {
-                Intent chatIntent=new Intent(MainActivity.this,chatWindow.class);
+                Intent chatIntent=new Intent(MainActivity.this,chat_window.class);
                 startActivity(chatIntent);
             }
         });

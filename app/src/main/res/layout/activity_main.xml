@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,26 +16,26 @@
             android:text="@string/hm"
             android:layout_marginTop="10dp"
             />
-
         <Button
             android:id="@+id/mainButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/ButtonText"
+            android:text="camera"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             />
-
         <Button
-            android:id="@+id/chat"
+            android:id="@+id/chatmain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/chatString"
+            android:text="text"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             />
-
     </LinearLayout>
+
+
+
 
 </RelativeLayout>

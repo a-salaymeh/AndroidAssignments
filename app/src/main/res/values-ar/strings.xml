@@ -3,18 +3,17 @@
     <string name="app_name">ورقة عمل 1</string>
     <string name="hm">مرحبا العالمية!</string>
     <string name="ButtonText">\' أنا زر</string>
-    <string name="loginID">login</string>
-    <string name="hintUser">Login name</string>
-    <string name="passwordID">Password</string>
+    <string name="loginID">تسجيل الدخول</string>
+    <string name="hintUser">اسم الدخول</string>
+    <string name="passwordID">كلمه السر</string>
     <string name="switchID">ماذا يفعل هذا؟</string>
-    <string name="dialog_message">Do you want to cancel?</string>
-    <string name="dialog_title">Title</string>
-    <string name="ok">yes</string>
-    <string name="cancel">Cancel</string>
-    <string name="chatString">Chat</string>
-    <string name="sendChat">send</string>
-    <string name="outCall">text</string>
-    <string name="inComing">text</string>
+    <string name="dialog_message">هل تريد الالغاء؟</string>
+    <string name="dialog_title">عنوان</string>
+    <string name="ok">نعم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="sendbutton">إرسال</string>
+
+
 
 
 

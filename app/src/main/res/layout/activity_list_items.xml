@@ -8,8 +8,7 @@
     tools:context=".list_items"
     android:background="@color/colorgold"
     android:columnCount="2"
-    android:rowCount="2"
-  >
+    android:rowCount="2">
 
     <RadioButton
         android:id="@+id/radioButton"
