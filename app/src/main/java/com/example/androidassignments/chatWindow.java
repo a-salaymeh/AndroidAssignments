@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,7 @@ public class chatWindow extends AppCompatActivity {
     private class ChatAdapter extends ArrayAdapter<String> {
 
         public ChatAdapter(@NonNull Context context) {
+
             super(context, 0);
         }
 
@@ -73,13 +75,13 @@ public class chatWindow extends AppCompatActivity {
         public View getView(int index, View convertView, ViewGroup parent) {
             LayoutInflater inflater = chatWindow.this.getLayoutInflater();
 
-            View result = null;
+            View result;
             if (index % 2 == 0)
                 result = inflater.inflate(R.layout.inchat, null);
             else
                 result = inflater.inflate(R.layout.outgoing, null);
 
-            TextView message = (TextView) result.findViewById(R.id.messageText);
+            TextView message = result.findViewById(R.id.messageText);
             message.setText(getItem(index));
             return result;
 

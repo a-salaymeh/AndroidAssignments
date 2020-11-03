@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnRef;
     Button btnChat;
+    Button btnMenu;
     public static final int LIST_VIEW=10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnMenu=findViewById(R.id.toolbarButton);
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toolIntent=new Intent(MainActivity.this,TestToolbar.class);
+                startActivity(toolIntent);
+            }
+        });
 
     }
     protected void onActivityResult(int request_code, int response_code, Intent data) {
