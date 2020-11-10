@@ -7,29 +7,20 @@
     <string name="hintUser">Login name</string>
     <string name="passwordID">Password</string>
     <string name="switchID">ماذا يفعل هذا؟</string>
-    <string name="dialog_message">Do you want to cancel?</string>
-    <string name="dialog_title">Title</string>
-    <string name="ok">yes</string>
-    <string name="cancel">Cancel</string>
-    <string name="chatString">Chat</string>
-    <string name="sendChat">send</string>
-    <string name="outCall">text</string>
-    <string name="inComing">text</string>
-    <string name="title_activity_test_toolbar">TestToolbar</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="dialog_message">هل تريد الالغاء؟</string>
+    <string name="dialog_title">عنوان</string>
+    <string name="ok">نعم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="chatString">دردشة</string>
+    <string name="sendChat">إرسال</string>
+    <string name="outCall">نص</string>
+    <string name="inComing">نص</string>
+    <string name="title_activity_test_toolbar">اختبار شريط الأدوات</string>
+    <string name="tool_bar_text">نص</string>
+    <string name="toolbarname">شريط الأدوات</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="toolBarString">test toolbar</string>
+
+
 
 
 </resources>

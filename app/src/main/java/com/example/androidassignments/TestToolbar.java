@@ -30,7 +30,6 @@ public class TestToolbar extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +43,6 @@ public class TestToolbar extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "hello world!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
             }
         });
     }
@@ -63,10 +61,6 @@ public class TestToolbar extends AppCompatActivity {
                 Log.d("toolbar","option 1 selected");
                 Toolbar tbar=getWindow().getDecorView().findViewById((R.id.toolbar));
                 Snackbar.make(tbar,str1,Snackbar.LENGTH_LONG).show();
-
-
-
-
                 break;
             case R.id.option2:
                 //Start an activity…
@@ -104,8 +98,6 @@ public class TestToolbar extends AppCompatActivity {
                 });
                 AlertDialog d2=cBuilder.create();
                 d2.show();
-
-
                 break;
             case R.id.option4:
                 Context context = getApplicationContext();
@@ -114,9 +106,6 @@ public class TestToolbar extends AppCompatActivity {
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
         }
-
-
-
 
         return  true;
     }

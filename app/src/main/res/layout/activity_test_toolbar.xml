@@ -8,7 +8,7 @@
 
 
 
-    <include layout="@layout/content_test_toolbar" />
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -26,7 +26,6 @@
         android:contentDescription="@string/app_name"
         android:layout_margin="16dp"
         android:layout_alignParentBottom="true"/>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -4,7 +4,10 @@ package com.example.androidassignments;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.database.Cursor;
 
 import java.util.ArrayList;
 
@@ -27,6 +31,11 @@ public class chatWindow extends AppCompatActivity {
     Button btnChat;
     ArrayList<String> textMessage;
     ChatAdapter textAdapter;
+    SQLiteDatabase db;
+    ChatDatabaseHelper db_helper;
+
+
+
 
 
     @Override
@@ -37,22 +46,39 @@ public class chatWindow extends AppCompatActivity {
         userText = findViewById(R.id.editText);
         chatView = findViewById(R.id.listChat);
         textMessage = new ArrayList<>();
+        db_helper=new ChatDatabaseHelper(this);
+        db=db_helper.getWritableDatabase();
+        String[] col={ChatDatabaseHelper.KEY_MESSAGE};
+        Cursor cursor = db.query(ChatDatabaseHelper.TABLE_NAME, col,null, null, null, null, null);
 
 
         textAdapter = new ChatAdapter(this);
         chatView.setAdapter(textAdapter);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            Log.i(ACTIVITY_NAME,"SQL MESSAGE"+ cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            cursor.getColumnCount();
+            textMessage.add(cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            cursor.moveToNext();
+        }
+        for(int i=0; i<cursor.getColumnCount();i++){
+            Log.i(ACTIVITY_NAME,cursor.getColumnName(i));
+        }
+        cursor.close();
 
 
         btnChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textMessage.add(userText.getText().toString());
+                ContentValues Cale=new ContentValues();
+                Cale.put(ChatDatabaseHelper.KEY_MESSAGE,userText.getText().toString());
+                db.insert(ChatDatabaseHelper.TABLE_NAME,null,Cale);
                 textAdapter.notifyDataSetChanged();
                 userText.setText("");
+
             }
         });
-
-
     }
 
     private class ChatAdapter extends ArrayAdapter<String> {
@@ -82,9 +108,15 @@ public class chatWindow extends AppCompatActivity {
                 result = inflater.inflate(R.layout.outgoing, null);
 
             TextView message = result.findViewById(R.id.messageText);
-            message.setText(getItem(index));
+            message.setText(getString(index));
             return result;
 
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        db.close();
     }
 }
