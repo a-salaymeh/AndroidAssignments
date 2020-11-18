@@ -18,6 +18,16 @@
     <string name="title_activity_test_toolbar">اختبار شريط الأدوات</string>
     <string name="tool_bar_text">نص</string>
     <string name="toolbarname">شريط الأدوات</string>
+    <string name="weatherButtonText">Weather</string>
+    <string name="title_activity_weather_forecast">WeatherForecast</string>
+    <string-array name="cities">
+        <item>Kitchener</item>
+        <item>Waterloo</item>
+        <item>Toronto</item>
+        <item>Ottawa</item>
+        <item>Vancouver</item>
+    </string-array>
+
 
 
 

@@ -17,12 +17,15 @@
     <string name="title_activity_test_toolbar">TestToolbar</string>
     <string name="tool_bar_text">text</string>
     <string name="toolbarname">toolbar</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
+    <string name="weatherButtonText">Weather</string>
+    <string name="title_activity_weather_forecast">WeatherForecast</string>
+    <string-array name="cities">
+        <item>Kitchener</item>
+        <item>Waterloo</item>
+        <item>Toronto</item>
+        <item>Ottawa</item>
+        <item>Vancouver</item>
+    </string-array>
 
-
-    <!-- Strings used for fragments for toolbar -->
 
 </resources>
