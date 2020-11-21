@@ -1,0 +1,36 @@
+
+<resources>
+    <string name="app_name">ورقة عمل 1</string>
+    <string name="hm">مرحبا العالمية!</string>
+    <string name="ButtonText">\' أنا زر</string>
+    <string name="loginID">login</string>
+    <string name="hintUser">Login name</string>
+    <string name="passwordID">Password</string>
+    <string name="switchID">ماذا يفعل هذا؟</string>
+    <string name="dialog_message">هل تريد الالغاء؟</string>
+    <string name="dialog_title">عنوان</string>
+    <string name="ok">نعم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="chatString">دردشة</string>
+    <string name="sendChat">إرسال</string>
+    <string name="outCall">نص</string>
+    <string name="inComing">نص</string>
+    <string name="title_activity_test_toolbar">اختبار شريط الأدوات</string>
+    <string name="tool_bar_text">نص</string>
+    <string name="toolbarname">شريط الأدوات</string>
+    <string name="weatherButtonText">Weather</string>
+    <string name="title_activity_weather_forecast">WeatherForecast</string>
+    <string-array name="cities">
+        <item>Kitchener</item>
+        <item>Waterloo</item>
+        <item>Toronto</item>
+        <item>Ottawa</item>
+        <item>Vancouver</item>
+    </string-array>
+
+
+
+
+
+
+</resources>

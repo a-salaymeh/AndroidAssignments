@@ -1,6 +1,31 @@
 <resources>
     <string name="app_name">Assignments 1</string>
     <string name="hm">Hello World!</string>
-    <string name="ButtonText"> Im a button</string>
+    <string name="ButtonText">\'Im a button</string>
+    <string name="loginID">login</string>
+    <string name="hintUser">Login name</string>
+    <string name="passwordID">Password</string>
+    <string name="switchID">What does this do?</string>
+    <string name="dialog_message">Do you want to exit?</string>
+    <string name="dialog_title">Title</string>
+    <string name="ok">yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="chatString">Chat</string>
+    <string name="sendChat">send</string>
+    <string name="outCall">text</string>
+    <string name="inComing">text</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="tool_bar_text">text</string>
+    <string name="toolbarname">toolbar</string>
+    <string name="weatherButtonText">Weather</string>
+    <string name="title_activity_weather_forecast">WeatherForecast</string>
+    <string-array name="cities">
+        <item>Kitchener</item>
+        <item>Waterloo</item>
+        <item>Toronto</item>
+        <item>Ottawa</item>
+        <item>Vancouver</item>
+    </string-array>
+
 
 </resources>
