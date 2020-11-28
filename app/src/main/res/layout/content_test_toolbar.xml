@@ -15,10 +15,7 @@
         android:layout_height="64dp"
         android:background="#FFFFBB33"
         android:contentDescription="@string/app_name"
-        android:scaleType="centerInside"
-        android:src="@drawable/text_speech"
-        app:srcCompat="@drawable/text_speech"
-        tools:srcCompat="@drawable/text_speech">
+        android:scaleType="centerInside">
         </ImageView>
 
         <EditText

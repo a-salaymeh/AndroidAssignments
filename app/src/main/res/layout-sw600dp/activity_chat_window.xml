@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".chatWindow">
+
+    <FrameLayout
+        android:id="@+id/lay_frame"
+        android:layout_width="335dp"
+        android:layout_height="1629dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="52dp"
+        android:layout_toEndOf="@+id/listChat">
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/listChat"
+        android:layout_width="548dp"
+        android:layout_height="1577dp"
+        android:layout_above="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="20dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="366dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/sendChat">
+
+    </Button>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="463dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/sent"
+        android:autofillHints="text"
+        android:hint="hint"
+        android:inputType="textShortMessage|textLongMessage">
+
+    </EditText>
+
+
+</RelativeLayout>
